@@ -1,0 +1,77 @@
+@import '../../styles/main.scss';
+
+.game__page {
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+  .game__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include respond('ipad') {
+      display: flex;
+      flex-direction: column;
+    }
+    .game__player__container {
+      flex-grow: 0.5;
+      position: relative;
+      @include respond('ipad') {
+        order: 2;
+        position: absolute;
+        bottom: 0;
+      }
+    }
+    .game__player-img {
+      position: absolute;
+      width: 70%;
+      @include respond('ipad') {
+        width: 40%;
+      }
+      &.player1-img {
+        @include respond('ipad') {
+          left: -100px;
+        }
+        top: 0px;
+        left: 50px;
+        z-index: 2;
+      }
+      &.player2-img {
+        top: 40px;
+        right: 60px;
+        @include respond('ipad') {
+          left: 100px;
+        }
+      }
+    }
+    .game__player__name {
+      width: 80%;
+      padding: 5%;
+      background: $light-blue;
+      text-align: center;
+      font-size: 24px;
+      font-weight: 800;
+      border-radius: 20px;
+      margin: auto;
+      position: relative;
+      &.player1-name {
+        top: -40px;
+        right: -40px;
+        color: red;
+        @include respond('ipad') {
+          left: -100px;
+        }
+      }
+      &.player2-name {
+        top: -100px;
+        left: -40px;
+        color: $medium-blue;
+        @include respond('ipad') {
+          left: 100px;
+        }
+      }
+    }
+  }
+}

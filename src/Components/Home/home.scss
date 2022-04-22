@@ -1,0 +1,114 @@
+@import '../../styles/main.scss';
+
+.home__page {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  justify-content: center;
+  .home__container {
+    text-align: center;  
+    background: $light-blue;
+    width: 1195px;
+    padding: 50px;
+    min-height: 50vh;
+    border-radius: 20px;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    @media (max-width: 1440px) {
+      width: 80vw;
+    }
+    @include respond('ipad') {
+      margin-bottom: 50px;
+    }
+    .home__forms__container {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      flex-wrap: wrap;
+      width: 100%;
+      align-items: center;
+      @include respond('ipad-pro') {
+        flex-direction: column;
+      }
+      .home__form__player {
+        position: relative;
+        z-index: 0;
+        .player-img {
+          position: absolute;
+          width: 70%;
+          z-index: -1;
+          @include respond('phone') {
+            width: 60%;
+          }
+        }
+        .player1-img {
+          top: -150px;
+          left: -100px;
+        }
+        .player2-img {
+          top: -120px;
+          right: -120px;
+        }
+      }
+      form {
+        display: flex;
+        flex-direction: column;
+        .input-field {
+          padding: 10px 30px;
+        }
+        label {
+          font-size: 64px;
+          &.player1-label {
+            text-align: right;
+            color: $red;
+            font-weight: 800;
+          }
+          &.player2-label {
+            text-align: left;
+            color: $medium-blue;
+            font-weight: 800;
+          }
+        }
+        .player1-btn {
+          margin: auto;
+          margin-right: 0;
+        }
+      }
+    }
+    .home__vs {
+      .vs-img {
+        width: 100px;
+      }
+    }
+    button {
+      margin-top: 50px;
+    }
+    .disabled-btn {
+      background: $dark-gray;
+    }
+    .tooltip-btn {
+      position: relative;
+      &:hover .tooltiptext-btn {
+        visibility: visible;
+      }
+    }
+    .tooltiptext-btn {
+      visibility: hidden;
+      width: 200px;
+      background-color: $light-white;
+      color: $red;
+      text-align: center;
+      border-radius: 6px;
+      padding: 20px;
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 70px;
+      z-index: 1;
+    }
+  }
+}

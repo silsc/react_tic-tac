@@ -1,0 +1,32 @@
+@import '../../styles/main.scss';
+.game__board__container {
+  flex-grow: 6;
+  margin: 0 50px;
+  .game__board__info {
+    width: 500px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    .game__player {
+      &__turn {
+        flex-grow: 1;
+        font-size: 36px;
+      }
+      &__name {
+        flex-grow: 1;
+        width: 40%;
+        padding: 15px;
+      }
+    }
+  }
+  .game__board {
+    margin: auto;
+    background: $light-blue;
+    min-width: 500px;
+    border-radius: 20px;
+    &-row {
+      display: flex;
+    }
+  }
+}

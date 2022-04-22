@@ -1,0 +1,62 @@
+@import './colors.scss';
+@import './mixins.scss';
+
+html {
+  background: $bg-gradient-blue;
+}
+
+input {
+  background: $light-white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  width: 300px;
+  margin: 10px 0;
+}
+
+.btn {
+  color: white;
+  font-weight: 800;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  width: 200px;
+}
+
+.btn:hover {
+  cursor: pointer;
+}
+
+.btn:hover:disabled {
+  cursor: not-allowed;
+}
+
+.btn-start {
+  background: $btn-gradient-blue;
+  min-width: 200px;
+  padding: 20px 15px;
+}
+
+.btn-red {
+  background: $btn-gradient-red;
+}
+
+.btn-green {
+  background: $btn-gradient-green;
+}
+
+.logo-xl {
+  width: 45vw;
+  margin: 30px 0;
+  @include respond('ipad-pro') {
+    width: 70vw;
+    padding-bottom: 80px;
+  }
+  @include respond('phone') {
+    width: 90vw;
+  }
+}
+
+.is-hidden {
+  display: none;
+}

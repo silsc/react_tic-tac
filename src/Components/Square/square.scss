@@ -1,0 +1,34 @@
+@import '../../styles/main.scss';
+
+.game__square {
+  width: 100%;
+  height: 100px;
+  border: 2px solid $dark-gray;
+  position: relative;
+  &:focus {
+    background-color: $dark-gray;
+  }
+  &:first-child {
+    border-top: none;
+    border-left: none;
+  }
+  &:nth-child(2) {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+  }
+  &:nth-child(3) {
+    border-top: none;
+    border-right: none;
+  }
+  &.last-row {
+    border-bottom: none;
+  }
+  .player-token {
+    position: absolute;
+    width: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
