@@ -1,4 +1,4 @@
-# TIC-TAC
+# TIC-TAC 👾
 
 Tic Tac Toe Game built with Create React App.
 
