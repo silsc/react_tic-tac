@@ -24,6 +24,9 @@
     @include respond('ipad') {
       margin-bottom: 50px;
     }
+    @include respond('phone') {
+      padding: 30px 20px;
+    }
     .home__forms__container {
       display: flex;
       justify-content: space-around;
@@ -42,16 +45,24 @@
           width: 70%;
           z-index: -1;
           @include respond('phone') {
-            width: 60%;
+            width: 40%;
           }
         }
         .player1-img {
           top: -150px;
           left: -100px;
+          @include respond('phone') {
+            top: -105px;
+            left: -28px;
+          }
         }
         .player2-img {
           top: -120px;
           right: -120px;
+          @include respond('phone') {
+            top: -69px;
+            right: -35px;
+          }
         }
       }
       form {
@@ -59,18 +70,31 @@
         flex-direction: column;
         .input-field {
           padding: 10px 30px;
+          @include respond('phone') {
+            width: 100%;
+            padding: 10px;
+          }
         }
         label {
           font-size: 64px;
+          @include respond('phone') {
+            font-size: 13vw;
+          }
           &.player1-label {
             text-align: right;
             color: $red;
             font-weight: 800;
+            @include respond('phone') {
+              text-align: center;
+            }
           }
           &.player2-label {
             text-align: left;
             color: $medium-blue;
             font-weight: 800;
+            @include respond('phone') {
+              text-align: center;
+            }
           }
         }
         .player1-btn {
@@ -82,6 +106,9 @@
     .home__vs {
       .vs-img {
         width: 100px;
+        @include respond('ipad-pro') {
+          padding: 50px 0;
+        }
       }
     }
     button {
