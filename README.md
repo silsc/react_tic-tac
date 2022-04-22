@@ -14,15 +14,14 @@ Tic Tac Toe Game built with Create React App.
 
 👩🏻‍💻 Deployed with Netlify.
 
-
 ## Project setup
+
 ```
 npm install
 ```
 
-
 ## License
+
 Designed by [Silvia Salat](https://www.heyitssilvia.com/).
 
 [MIT](https://opensource.org/licenses/MIT)
-
