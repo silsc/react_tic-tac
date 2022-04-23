@@ -21,6 +21,9 @@ input {
   padding: 10px 15px;
   border-radius: 20px;
   width: 200px;
+  @include respond('phone') {
+    width: 100%;
+  }
 }
 
 .btn:hover {
