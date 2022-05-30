@@ -1,8 +1,10 @@
-import React from "react";
-import { useLocation } from 'react-router-dom';
 import "./winner.scss"
+
+import React from "react";
+import {AttentionSeeker, Fade} from "react-awesome-reveal";
+import {useLocation} from 'react-router-dom';
+
 import winnerImg from "../../assets/winner.svg";
-import { Fade, AttentionSeeker } from "react-awesome-reveal";
 
 export default function Winner() {
   const location = useLocation()
