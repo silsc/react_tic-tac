@@ -11,6 +11,8 @@
   &:first-child {
     border-top: none;
     border-left: none;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   &:nth-child(2) {
     border-top: none;
@@ -20,6 +22,8 @@
   &:nth-child(3) {
     border-top: none;
     border-right: none;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
   }
   &.last-row {
     border-bottom: none;

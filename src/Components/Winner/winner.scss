@@ -6,8 +6,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  
   position: relative;
+  @include respond('phone') {
+    margin-top: 30px;
+  }
   .winner {
     &-title {
       text-align: center;
@@ -15,20 +17,28 @@
       font-weight: 900;
       color: #ffff;
       margin-bottom: 30px;
+      @include respond('phone') {
+        font-size: 32px;
+      }
     }
     &-name {
-      width: 40%;
-      padding: 1%;
+      width: fit-content;
+      padding: 10% 30%;
       background: $light-blue;
       text-align: center;
       font-size: 36px;
       font-weight: 900;
       border-radius: 20px;
+      @include respond('phone') {
+        font-size: 32px;
+      }
     }
     &-img {
-      position: absolute;
       bottom: -100px;
       right: -30px;
+      @include respond('phone') {
+        width: 90vw;
+      }
     }
   }
 }

@@ -2,12 +2,20 @@
 .game__board__container {
   flex-grow: 6;
   margin: 0 50px;
+  @include respond('ipad-pro') {
+    width: 90vw;
+  }
   .game__board__info {
     width: 500px;
     margin: auto;
     display: flex;
     align-items: center;
     margin-bottom: 20px;
+    @include respond('ipad-pro') {
+      width: 90vw;
+      margin-bottom: 10vh;
+
+    }
     .game__player {
       &__turn {
         flex-grow: 1;
@@ -25,8 +33,23 @@
     background: $light-blue;
     min-width: 500px;
     border-radius: 20px;
+    @include respond('ipad-pro') {
+      min-width: 90vw;
+    }
     &-row {
       display: flex;
     }
+  }
+}
+
+.game__player__container {
+  @include respond('ipad-pro') {
+    display: none;
+  }
+}
+
+.game__container {
+  @include respond('ipad-pro') {
+    height: 100%;
   }
 }

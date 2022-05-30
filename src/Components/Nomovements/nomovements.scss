@@ -2,10 +2,13 @@
 
 .results__nomove {
   height: 100%;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include respond('phone') {
+    margin-top: 30px;
+  }
   .nomove{
     &-title {
       text-align: center;
@@ -13,10 +16,16 @@
       font-weight: 900;
       color: #ffff;
       margin-bottom: 30px;
+      @include respond('phone') {
+        font-size: 32px;
+      }
     }
     &-img {
       width: 450px;
       align-self: center;
+      @include respond('phone') {
+        width: 90vw;
+      }
     }
   }
 }
