@@ -5,6 +5,8 @@ import logoXl from "../../assets/logo-xl.png"
 import vs from "../../assets/vs.png"
 import player1Img from "../../assets/player1.png"
 import player2Img from "../../assets/player2.png"
+import Loader from '../Loader/Loader';
+import { Fade, AttentionSeeker } from "react-awesome-reveal";
 
 export default function Home() {
   const [player1, setPlayer1] = useState("");
@@ -38,61 +40,84 @@ export default function Home() {
 
   return (
     <div className='home__page'>
-      <header className='home__header'>
-        <img src={logoXl} className="logo-xl" alt="Big Logo" />
-      </header>
-      <div className='home__container'>
-        <div className='home__forms__container'>
-          <div className='home__form__player'>
-            <img src={player1Img} className="player-img player1-img" alt="Player 1" />
-            <form onSubmit={submitPlayer1}>
-            <label htmlFor="player1name" className='player1-label'>Player 1</label>
-            <input
-              className="input-field"
-              type="text"
-              name="player1name"
-              disabled={`${ player1 !== "" && disableInput ? "disabled" : ""}`}
-              placeholder="Insert your warrior name"
-            />
-            <input 
-              type="submit"
-              className={`btn player1-btn ${ submitValue1 === "Submit your name" ? "btn-red" : "btn-green"}`} 
-              disabled={`${ player1 !== "" && disableInput ? "disabled" : ""}`}
-              value={submitValue1} />
-            </form>
+      <Loader></Loader>
+      <Fade delay={1500} triggerOnce>
+        <AttentionSeeker effect={"bounce"} delay={1500} triggerOnce>
+          <header className='home__header'>
+            <img src={logoXl} className="logo-xl" alt="Big Logo" />
+          </header>
+        </AttentionSeeker>
+      </Fade>
+
+      <Fade delay={2000} triggerOnce>
+        <div className='home__container'>
+          <div className='home__forms__container'>
+            <Fade delay={2100} triggerOnce>
+              <AttentionSeeker effect={"bounce"} delay={2100} triggerOnce>
+                <div className='home__form__player'>
+                <img src={player1Img} className="player-img player1-img" alt="Player 1" />
+                <form onSubmit={submitPlayer1}>
+                <label htmlFor="player1name" className='player1-label'>Player 1</label>
+                <input
+                  className="input-field"
+                  type="text"
+                  name="player1name"
+                  disabled={`${ player1 !== "" && disableInput ? "disabled" : ""}`}
+                  placeholder="Insert your warrior name"
+                />
+                <input 
+                  type="submit"
+                  className={`btn player1-btn ${ submitValue1 === "Submit your name" ? "btn-red" : "btn-green"}`} 
+                  disabled={`${ player1 !== "" && disableInput ? "disabled" : ""}`}
+                  value={submitValue1} />
+                </form>
+                </div>
+              </AttentionSeeker>
+            </Fade>
+            <Fade delay={2500} triggerOnce>
+              <div className='home__vs'>
+                <img src={vs} className="vs-img" alt="vs img" />
+              </div>
+            </Fade>
+            <Fade delay={2100} triggerOnce>
+              <AttentionSeeker effect={"bounce"} delay={2200} triggerOnce>
+                <div className='home__form__player'>
+                  <img src={player2Img} className="player-img player2-img" alt="Player 1" />
+                  <form onSubmit={submitPlayer2}>
+                  <label htmlFor="player2name" className='player2-label'>Player 2</label>
+                    <input
+                      className="input-field"
+                      type="text"
+                      name="player2name"
+                      disabled={`${ player2 !== "" && disableInput  ? "disabled" : ""}`}
+                      placeholder="Insert your warrior name"
+                    />
+                    <input 
+                      type="submit" 
+                      className={`btn ${ submitValue2 === "Submit your name" ? "btn-red" : "btn-green"}`}
+                      disabled={`${ player2 !== "" && disableInput  ? "disabled" : ""}`}
+                      value={submitValue2}
+                    />
+                  </form>
+                </div>
+              </AttentionSeeker>
+            </Fade>
           </div>
-          <div className='home__vs'>
-            <img src={vs} className="vs-img" alt="vs img" />
-          </div>
-          <div className='home__form__player'>
-            <img src={player2Img} className="player-img player2-img" alt="Player 1" />
-            <form onSubmit={submitPlayer2}>
-            <label htmlFor="player2name" className='player2-label'>Player 2</label>
-              <input
-                className="input-field"
-                type="text"
-                name="player2name"
-                disabled={`${ player2 !== "" && disableInput  ? "disabled" : ""}`}
-                placeholder="Insert your warrior name"
-              />
-              <input 
-                type="submit" 
-                className={`btn ${ submitValue2 === "Submit your name" ? "btn-red" : "btn-green"}`}
-                disabled={`${ player2 !== "" && disableInput  ? "disabled" : ""}`}
-                value={submitValue2}
-              />
-            </form>
-          </div>
+          <Fade delay={2400} triggerOnce>
+            <AttentionSeeker effect={"heartBeat"} delay={2400} triggerOnce>
+              <a onClick={()=>{toGame()}}>
+                <button 
+                  className={`${ player2 === "" || player1 === ""  ? "tooltip-btn disabled-btn" : ""} btn btn-start `} 
+                  disabled={`${ player2 === "" || player1 === ""  ? "disabled" : ""}`}>
+                        Start game
+                    <span className="tooltiptext-btn">Please submit a name before starting the game</span>
+                </button>
+              </a>
+            </AttentionSeeker>
+          </Fade>
         </div>
-        <a onClick={()=>{toGame()}}>
-          <button 
-            className={`${ player2 === "" || player1 === ""  ? "tooltip-btn disabled-btn" : ""} btn btn-start `} 
-            disabled={`${ player2 === "" || player1 === ""  ? "disabled" : ""}`}>
-                  Start game
-              <span className="tooltiptext-btn">Please submit a name before starting the game</span>
-          </button>
-        </a>
-      </div>
+      </Fade>
+
     </div>
   )
 }

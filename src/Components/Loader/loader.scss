@@ -1,0 +1,25 @@
+@import '../../styles/main.scss';
+
+.loader {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 2000;
+  background: $bg-gradient-blue;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  transition: all 0.5s ease-in;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &--show {
+    transition: all 0.5s ease-in;
+  }
+  &--hide {
+    opacity: 0;
+    z-index: -1000;
+    transition: all 0.5s ease-in;
+  }
+}
