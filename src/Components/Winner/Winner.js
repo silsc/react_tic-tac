@@ -1,8 +1,8 @@
 import "./winner.scss";
 
 import React from "react";
-import {AttentionSeeker, Fade} from "react-awesome-reveal";
-import {useLocation} from "react-router-dom";
+import { AttentionSeeker, Fade } from "react-awesome-reveal";
+import { useLocation } from "react-router-dom";
 
 import winnerImg from "../../assets/winner.svg";
 
