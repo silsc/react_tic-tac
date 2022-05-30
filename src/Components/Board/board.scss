@@ -12,7 +12,7 @@
     align-items: center;
     margin-bottom: 20px;
     @include respond('ipad-pro') {
-      width: 90vw; 
+      width: 90vw;
       margin-bottom: 10vh;
 
     }
@@ -44,12 +44,12 @@
 
 .game__player__container {
   @include respond('ipad-pro') {
-    display: none;  
+    display: none;
   }
 }
 
 .game__container {
   @include respond('ipad-pro') {
-    height: 100%; 
+    height: 100%;
   }
 }
