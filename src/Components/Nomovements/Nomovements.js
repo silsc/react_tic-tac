@@ -1,12 +1,12 @@
-import React from "react";
-import "./nomovements.scss"
-import stopImg from "../../assets/stop.svg";
-import { Fade, AttentionSeeker } from "react-awesome-reveal";
+import "./nomovements.scss";
 
+import React from "react";
+import { AttentionSeeker, Fade } from "react-awesome-reveal";
+
+import stopImg from "../../assets/stop.svg";
 
 export default function Nomovements() {
-
-  return ( 
+  return (
     <section className="results__nomove">
       <AttentionSeeker effect={"bounce"}>
         <h1 className="nomove-title">No more movements</h1>
@@ -16,5 +16,5 @@ export default function Nomovements() {
         <img src={stopImg} className="nomove-img" alt="No movements" />
       </AttentionSeeker>
     </section>
-  )
+  );
 }

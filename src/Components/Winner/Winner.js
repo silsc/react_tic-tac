@@ -1,14 +1,16 @@
+import "./winner.scss";
+
 import React from "react";
-import { useLocation } from 'react-router-dom';
-import "./winner.scss"
+import { AttentionSeeker, Fade } from "react-awesome-reveal";
+import { useLocation } from "react-router-dom";
+
 import winnerImg from "../../assets/winner.svg";
-import { Fade, AttentionSeeker } from "react-awesome-reveal";
 
 export default function Winner() {
-  const location = useLocation()
+  const location = useLocation();
   const winner = location.state.winner;
 
-  return ( 
+  return (
     <section className="results__winner">
       <AttentionSeeker effect={"bounce"}>
         <h1 className="winner-title">And the winner is...</h1>
@@ -20,13 +22,11 @@ export default function Winner() {
         </AttentionSeeker>
       </Fade>
 
-
       <Fade delay={400}>
-        <AttentionSeeker effect={"tada"} >
+        <AttentionSeeker effect={"tada"}>
           <img src={winnerImg} className="winner-img" alt="Winner" />
         </AttentionSeeker>
       </Fade>
-
     </section>
-  )
+  );
 }
