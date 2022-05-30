@@ -1,7 +1,7 @@
 import "./loader.scss";
 
-import React, { useEffect, useState } from "react";
-import { AttentionSeeker, Fade } from "react-awesome-reveal";
+import React, {useEffect, useState} from "react";
+import {AttentionSeeker, Fade} from "react-awesome-reveal";
 
 import logoXl from "../../assets/logo-xl.png";
 
@@ -16,11 +16,10 @@ export default function Loader() {
     }, 1000);
   }, []);
 
-  return (
-    <section className={`loader ${loading ? "loader--show" : "loader--hide"}`}>
-      <AttentionSeeker effect={"bounce"}>
-        <img src={logoXl} className="logo-xl" alt="Big Logo" />
-      </AttentionSeeker>
-    </section>
-  );
+  return (<section className = {`loader ${
+               loading ? "loader--show" : "loader--hide"}`}>
+          <AttentionSeeker effect = {"bounce"}>
+          <img src = {logoXl} className = "logo-xl" alt = "Big Logo" />
+          </AttentionSeeker>
+    </section>);
 }
