@@ -2,7 +2,9 @@
 
 Tic Tac Toe Game built with Create React App.
 
-[LIVE VERSION](https://heyitssilvia-tic-tac.netlify.app/).
+[LIVE VERSION](https://heyitssilvia-tic-tac.netlify.app/)
+
+[FIGMA](https://www.figma.com/file/vOkaLgPm1SFrasC93RlC1S/Tic-Tac-Toe?node-id=1%3A41&t=RBgdFbZXmqA9lggZ-1)
 
 ## Stack
 
@@ -12,7 +14,7 @@ Tic Tac Toe Game built with Create React App.
 
 🎨 Styled with [Sass](https://sass-lang.com/)
 
-👩🏻‍💻 Deployed with Netlify.
+👩🏻‍💻 Deployed with Netlify
 
 
 ## Project setup
